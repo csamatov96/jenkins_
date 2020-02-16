@@ -54,7 +54,7 @@ resource "aws_instance" "jenkins_master" {
         "sudo service jenkins start",
 
 
-	/*"# These commands below installs docker and configure",
+	"# These commands below installs docker and configure",
         "sudo curl -fsSL https://get.docker.com/ | sh",
 	"sudo systemctl enable docker", 
 	"sudo systemctl start docker",                                     
@@ -65,13 +65,13 @@ resource "aws_instance" "jenkins_master" {
 
 
 
-        "# Installs packer",
+        /*"# Installs packer",
         "sudo yum install wget unzip -y",
         "wget -P /tmp https://releases.hashicorp.com/packer/1.5.1/packer_1.5.1_linux_amd64.zip",
         "unzip /tmp/packer_1.5.1_linux_amd64.zip",
         "sudo rm  /sbin/packer &>/dev/null  ",
         "sudo mv packer /bin",
-        "packer version",
+        "packer version",*/
         
 
 	"# These commands below installs terraform",
