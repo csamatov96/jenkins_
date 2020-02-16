@@ -78,7 +78,7 @@ resource "aws_instance" "jenkins_master" {
 	"wget -P /tmp https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip",
 	"unzip /tmp/terraform_0.11.14_linux_amd64.zip",
 	"sudo mv terraform /bin",
-	"terraform version",*/
+	"terraform version",
 
         "# These commands below used for disabling host key verification",
         "sudo mv /tmp/.ssh /var/lib/jenkins/ &> /dev/null", #####################################################
