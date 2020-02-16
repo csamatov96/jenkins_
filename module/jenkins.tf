@@ -1,6 +1,6 @@
 data "aws_ami" "centos" {
   most_recent = true
-  owners      = ["amazon"] #
+  owners      = ["679593333241"] #
 
   filter {
     name   = "state"
@@ -9,7 +9,7 @@ data "aws_ami" "centos" {
 
   filter {
     name   = "name"
-    values = ["amzn-ami-2018.03.e-amazon-ecs-optimized"]
+    values = ["CentOS Linux 7 x86_64 HVM EBS ENA 1901_01-b7ee8a69-ee97-4a49-9e68-afaee216db2e-ami-05"]
   }
 }
 
