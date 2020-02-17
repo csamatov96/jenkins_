@@ -99,6 +99,6 @@ resource "aws_instance" "jenkins_master" {
 
 
   tags = {
-    Name = "jenkins_master"              
+    Name = "jenkins_master_node"              
   }
 }
