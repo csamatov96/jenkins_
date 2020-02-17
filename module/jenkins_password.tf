@@ -2,11 +2,11 @@ resource "null_resource" "jenkins_passwd" {
   triggers = {
     always_run = "${timestamp()}"
   }
-  depends_on = ["aws_route53_record.jenkins_master_node"] ######???
+  depends_on = ["aws_route53_record.jenkins_master"] #
 
  provisioner "remote-exec" {
     connection {
-      host        = "jenkins_master_node.${var.domain}"
+      host        = "jenkins_master.${var.domain}" #
       type        = "ssh"
       user        = "${var.user}"
       private_key = "${file(var.ssh_key_location)}"
