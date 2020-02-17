@@ -75,8 +75,8 @@ resource "aws_instance" "jenkins_master" {
         
 
 	"# These commands below installs terraform",
-	"wget -P /tmp https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip",
-	"unzip /tmp/terraform_0.11.14_linux_amd64.zip",
+	"wget -P /tmp https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip",
+	"unzip /tmp/terraform_0.11.7_linux_amd64.zip",
 	"sudo mv terraform /bin",
 	"terraform version",
 

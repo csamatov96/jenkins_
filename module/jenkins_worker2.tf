@@ -1,4 +1,4 @@
-resource "aws_instance" "jenkins_worker2" {
+/*resource "aws_instance" "jenkins_worker2" {
   instance_type               = "${var.instance_type}"
   ami                         = "${data.aws_ami.centos.id}"
   key_name                    = "${var.key_name}"
@@ -50,7 +50,7 @@ resource "aws_instance" "jenkins_worker2" {
       "wget -P /tmp https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip",
       "unzip /tmp/terraform_0.11.14_linux_amd64.zip",
       "sudo mv terraform /bin",
-      "terraform version",*/
+      "terraform version",
       "# These commands below used for disabling host key verification",
       "sudo mv /tmp/.ssh /var/lib/jenkins/ &> /dev/null",
       "sudo chown -R jenkins:jenkins /var/lib/jenkins/",
@@ -67,4 +67,4 @@ resource "aws_instance" "jenkins_worker2" {
   tags = {
     Name = "Jenkins worker2"
   }
-}
+}*/

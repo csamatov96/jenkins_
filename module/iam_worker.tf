@@ -1,4 +1,4 @@
-resource "aws_iam_role" "jenkins_admin_worker1" {
+/*resource "aws_iam_role" "jenkins_admin_worker1" {
   name = "jenkins_admin_worker1"
 
   assume_role_policy = <<EOF
@@ -43,4 +43,4 @@ resource "aws_iam_role_policy" "jenkins_admin_policy_worker1" {
     ]
 }
 EOF
-}
+}*/
