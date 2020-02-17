@@ -1,4 +1,4 @@
-resource "aws_route53_record" "jenkins_master_node" {
+resource "aws_route53_record" "jenkins_master" {
   zone_id = "${var.zone_id}"
   name    = "jenkins_master_node.${var.domain}"
   type    = "A"
