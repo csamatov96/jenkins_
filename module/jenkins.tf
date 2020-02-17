@@ -13,7 +13,7 @@ data "aws_ami" "centos" {
   }
 }
 
-resource "aws_instance" "jenkins_master_node" {
+resource "aws_instance" "jenkins_master" {
   depends_on                  = ["aws_key_pair.jenkins_key"]
   instance_type               = "${var.instance_type}"
   ami                         = "${data.aws_ami.centos.id}"
