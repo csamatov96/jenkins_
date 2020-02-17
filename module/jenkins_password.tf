@@ -2,7 +2,7 @@ resource "null_resource" "jenkins_passwd" {
   triggers = {
     always_run = "${timestamp()}"
   }
-  depends_on = ["aws_route53_record.jenkins_master"]
+  depends_on = ["aws_route53_record.jenkins_master_node"] ######???
 
  provisioner "remote-exec" {
     connection {

@@ -1,4 +1,4 @@
-resource "aws_iam_role" "jenkins_admin_node" {
+resource "aws_iam_role" "jenkins_admin_node" { ############
   name = "jenkins_admin_node"
 
   assume_role_policy = <<EOF
@@ -22,12 +22,12 @@ EOF
   }
 }
 
-resource "aws_iam_instance_profile" "jenkins_profile_node" {
+resource "aws_iam_instance_profile" "jenkins_profile_node" { ################
   name = "jenkins_profile_node"
   role = "${aws_iam_role.jenkins_admin_node.name}"
 }
 
-resource "aws_iam_role_policy" "jenkins_admin_policy_node" {
+resource "aws_iam_role_policy" "jenkins_admin_policy_node" { ################
   name = "jenkins_admin_policy_node"
   role = "${aws_iam_role.jenkins_admin_node.id}"
 
