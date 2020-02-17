@@ -3,7 +3,7 @@ resource "aws_route53_record" "jenkins_master" {
   name    = "jenkins_master_node.${var.domain}"
   type    = "A"
   ttl     = "60"
-  records = ["${aws_instance.jenkins_master_node.public_ip}"]
+  records = ["${aws_instance.jenkins_master.public_ip}"]
 }
 /*
 resource "aws_route53_record" "jenkins_worker1" {
