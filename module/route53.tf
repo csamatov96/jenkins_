@@ -1,9 +1,9 @@
-resource "aws_route53_record" "jenkins_master" {
+resource "aws_route53_record" "jenkins_master_node" {
   zone_id = "${var.zone_id}"
-  name    = "jenkins_master.${var.domain}"
+  name    = "jenkins_master_node.${var.domain}"
   type    = "A"
   ttl     = "60"
-  records = ["${aws_instance.jenkins_master.public_ip}"]
+  records = ["${aws_instance.jenkins_master_node.public_ip}"]
 }
 /*
 resource "aws_route53_record" "jenkins_worker1" {

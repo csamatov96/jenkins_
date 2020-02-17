@@ -13,14 +13,14 @@ data "aws_ami" "centos" {
   }
 }
 
-resource "aws_instance" "jenkins_master" {
-  depends_on                  = ["aws_key_pair.jenkins"]
+resource "aws_instance" "jenkins_master_node" {
+  depends_on                  = ["aws_key_pair.jenkins_key"]
   instance_type               = "${var.instance_type}"
   ami                         = "${data.aws_ami.centos.id}"
   key_name                    = "${var.key_name}"
   associate_public_ip_address = "true"
-  security_groups             = ["allow_ssh_and_jenkins"]
-  iam_instance_profile = "${aws_iam_instance_profile.jenkins_profile.name}",
+  security_groups             = ["SG"]
+  iam_instance_profile = "${aws_iam_instance_profile.jenkins_profile_node.name}",
 
 
   provisioner "file" {

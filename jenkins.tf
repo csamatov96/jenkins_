@@ -1,4 +1,4 @@
-module "jenkins_master" {
+module "jenkins_master_node" {
    source 		= 	"./module"         
    user 		= 	"${var.user}"
    domain 		= 	"${var.domain}"
