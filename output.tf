@@ -1,5 +1,5 @@
 output "jenkins_master" {
-  value = "${module.jenkins_master_node.jenkins_master}"     
+  value = "${module.jenkins_master.jenkins_master}"     
 }
 /*
 output "worker1" {
